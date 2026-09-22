@@ -131,6 +131,3 @@ The manuscript is self-contained. Upload `outputs/MPC_PID_Overleaf.zip` to Overl
 
 Useful next steps include publishing reproducible controller implementations, documenting the robot model and all controller settings, retraining and releasing the learned dynamics model, testing explicit hybrid switching logic across disturbances and initial angles, measuring real-time computational cost, and validating the approach on physical hardware.
 
-## License
-
-Add an open-source license before publishing. The MIT License is a simple default for code; confirm that you have permission to redistribute every dataset, figure, and cited source before including them in a public release.
