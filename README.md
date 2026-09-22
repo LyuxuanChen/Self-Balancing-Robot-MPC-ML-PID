@@ -90,21 +90,19 @@ Key materials include:
 
 The MATLAB/Simulink files implement the data-preparation, LSTM-model training, trajectory playback, and controller workflows used to support the study. Place these files in the suggested `models/`, `src/`, and `data/` folders above when publishing the repository.
 
-| Current filename | Recommended public filename | Purpose |
-| --- | --- | --- |
-| `selfBalanceRobot_Demon...Data.slx` | `selfBalancingRobot_Demonstration.slx` | Demonstration model (confirm the full original filename before renaming). |
-| `selfBalanceRobot_verylarg...ance.slx` | `selfBalancingRobot_LargeDisturbance.slx` | Large-disturbance scenario model (confirm the full original filename before renaming). |
-| `selfBalanceRobot_Recovery.slx` | `selfBalancingRobot_Recovery.slx` | Initial-angle recovery scenario model. |
-| `lstmmodel111.mat` | `learnedDynamicsLSTM.mat` | Saved trained LSTM dynamics model. |
-| `Data_extraction.m` | `extractTrainingData.m` | Extracts data for model training or analysis. |
-| `LSTM Model Training.m` | `trainLearnedDynamicsModel.m` | Trains the learned-dynamics LSTM model. |
-| `DataResampling.m` | `resampleTrainingData.m` | Resamples trajectories to the required time base. |
-| `PlaybackTrajectoryinSimulink.m` | `playTrajectoryInSimulink.m` | Loads and plays a trajectory in Simulink. |
-| `PIDRecoveryDataExtraction.m` | `extractPIDRecoveryData.m` | Extracts PID recovery results. |
-| `MPC.m` | `runLearnedDynamicsMPC.m` | Runs the learned-dynamics MPC workflow. |
-| `Angle_5deg_trajectory.csv` | `recovery_05deg_trajectory.csv` | Stores the 5° recovery trajectory. Add `pid_` or `mpc_` as a prefix if the file contains one controller only. |
+| Current filename | Purpose |
+| --- | --- |
+| `selfBalancingRobot_Demonstration.slx` | Demonstration model (confirm the full original filename before renaming). |
+| `selfBalancingRobot_LargeDisturbance.slx` | Large-disturbance scenario model (confirm the full original filename before renaming). |
+| `selfBalancingRobot_Recovery.slx` | Initial-angle recovery scenario model. |
+| `learnedDynamicsLSTM.mat` | Saved trained LSTM dynamics model. |
+| `extractTrainingData.m` | Extracts data for model training or analysis. |
+| `trainLearnedDynamicsModel.m` | Trains the learned-dynamics LSTM model. |
+| `resampleTrainingData.m` | Resamples trajectories to the required time base. |
+| `playTrajectoryInSimulink.m` | Loads and plays a trajectory in Simulink. |
+| `extractPIDRecoveryData.m` | Extracts PID recovery results. |
+| `runLearnedDynamicsMPC.m` | Runs the learned-dynamics MPC workflow. |
 
-Before releasing the repository, update any `load`, `run`, `sim`, or file-path references in the MATLAB scripts and Simulink models to use these names. Keeping functions and filenames in lower camel case makes them easy to identify and keeps the project consistent across macOS, Linux, and Windows.
 
 ### Suggested workflow
 
@@ -116,9 +114,6 @@ Before releasing the repository, update any `load`, `run`, `sim`, or file-path r
 
 The exact function arguments, Simulink block parameters, and model dependencies should be documented after the files are uploaded and checked. Do not commit any private paths, local machine-specific settings, credentials, or proprietary toolbox files.
 
-## Reproducing the paper
-
-The manuscript is self-contained. Upload `outputs/MPC_PID_Overleaf.zip` to Overleaf using **New Project → Upload Project**, open `main.tex`, add author information, and compile with pdfLaTeX or XeLaTeX. The repository includes the figures, tables, bibliography, and processed data needed for compilation; it does not require external downloads or code execution to build the paper.
 
 ## Limitations and responsible use
 
