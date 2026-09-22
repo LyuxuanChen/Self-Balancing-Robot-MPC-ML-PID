@@ -57,4 +57,4 @@ PID typically takes longer to recover and overshoots more strongly, but it reach
 
 ## Data source
 
-The full-precision source data are available in [`outputs/mpc_pid_paper/data/metrics.csv`](../outputs/mpc_pid_paper/data/metrics.csv). The recovery criterion and metric definitions are documented in the repository README.
+The full-precision source data are available in [`data`](data). The recovery criterion and metric definitions are documented in the repository README.
