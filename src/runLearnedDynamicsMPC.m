@@ -1,11 +1,6 @@
 function EnhancedMPCTest_LSTM_MPC
 %% Learning-Based MPC using LSTM Dynamics Model
-% Corrected version:
-% - LSTM sequence history maintained
-% - MPC rollout uses same LSTM history
-% - Multiple initial angles
-% - Higher simulation resolution
-% - Trajectory export
+
 
 clear; clc; close all;
 
@@ -15,13 +10,11 @@ clear; clc; close all;
 
 
 % Initial angle experiments
-% initial_angles_deg = [5 10 15 20 30 40 50 60 70];
-initial_angles_deg = [5];
+initial_angles_deg = [5 10 15 20 30 40 50 60 70];
     
 
 %% ===================== Model Loading =====================
 
-% modelFile = 'lstm_fdnew_model.mat';
 modelFile = 'lstmmodel111';
 
 
