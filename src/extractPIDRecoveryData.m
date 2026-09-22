@@ -35,14 +35,14 @@ model_name = 'selfBalanceRobotRecovery';
 
 % Initial recovery angles to test
 initial_angles_deg = [
-     % 5
-     % 10
-     % 15
-     % 20
-     % 30
-     % 40
-     % 50
-     % 60
+     5
+     10
+     15
+     20
+     30
+     40
+     50
+     60
      55
 ];
 
@@ -83,18 +83,18 @@ for run_idx = 1:length(initial_angles_deg)
     % Run Simulink Model
     %% --------------------------------------------------------
 
-    fprintf('▶️ Running simulation...\n');
+    fprintf('Running simulation...\n');
 
     sim(model_name);
 
-    fprintf('✅ Simulation complete.\n');
+    fprintf('Simulation complete.\n');
 
 
     %% --------------------------------------------------------
     % Extract Logged Signals
     %% --------------------------------------------------------
 
-    fprintf('📤 Extracting signals...\n');
+    fprintf('Extracting signals...\n');
 
 
     % Shared time vector
@@ -569,7 +569,7 @@ for run_idx = 1:length(initial_angles_deg)
         );
 
 
-    fprintf('\n✅ Run complete.\n');
+    fprintf('\nRun complete.\n');
 
 end
 
@@ -578,5 +578,5 @@ end
 
 fprintf('\n');
 fprintf('========================================\n');
-fprintf('✅ All pure recovery runs completed.\n');
+fprintf('All pure recovery runs completed.\n');
 fprintf('========================================\n');
