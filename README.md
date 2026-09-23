@@ -77,15 +77,6 @@ work/
   paper/                     # Analysis and quality-assurance scripts
 ```
 
-Key materials include:
-
-- `outputs/mpc_pid_comparison/MPC_PID_performance.xlsx` — supplied performance workbook
-- `outputs/mpc_pid_comparison/original_data/` — retained raw trajectory exports
-- `outputs/mpc_pid_paper/data/` — processed PID and MPC traces plus metrics
-- `outputs/mpc_pid_paper/figures/` — recovery and metric-comparison figures
-- `outputs/mpc_pid_paper/main.tex` — paper source
-- `outputs/MPC_PID_Overleaf.zip` — upload-ready Overleaf project
-
 ## MATLAB and Simulink implementation
 
 The MATLAB/Simulink files implement the data-preparation, LSTM-model training, trajectory playback, and controller workflows used to support the study. Place these files in the suggested `models/`, `src/`, and `data/` folders above when publishing the repository.
@@ -117,12 +108,10 @@ The exact function arguments, Simulink block parameters, and model dependencies 
 
 ## Limitations and responsible use
 
-- The controller architecture and training procedure come from earlier documentation and may not exactly match the settings that produced the supplied trajectories.
-- No plant equations, physical parameters, trained model, raw training dataset, normalization scheme, or full optimizer configuration is provided.
 - The proposed hybrid controller has not been simulated or experimentally evaluated in this repository.
 - Results should be cited as an illustrative analysis unless replaced with authenticated experimental or simulation records.
 
 ## Future work
 
-Useful next steps include publishing reproducible controller implementations, documenting the robot model and all controller settings, retraining and releasing the learned dynamics model, testing explicit hybrid switching logic across disturbances and initial angles, measuring real-time computational cost, and validating the approach on physical hardware.
+Useful next steps include publishing reproducible controller implementations, documenting the robot model and all controller settings, testing explicit hybrid switching logic across disturbances and initial angles, measuring real-time computational cost, and validating the approach on physical hardware.
 
